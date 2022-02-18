@@ -217,7 +217,6 @@ def check_user_created():
             sleep(0.25)
             if driver.find_element(By.XPATH, f'//td[contains(., "{locators.email}")]'):
                 print('--- Test Scenario: Check user created --- passed')
-                log_out()
 
 def check_we_logged_in_with_new_cred():
     if driver.current_url == locators.moodle_dashboard:
@@ -248,16 +247,16 @@ def delete_user():
     print(f'User has been deleted.')
 
 #----------------------------------------------------------------------------------------------------------------------#
-setUp()
-log_in(locators.moodle_username, locators.moodle_password)
-create_new_user()
-check_user_created()
+#setUp()
+#log_in(locators.moodle_username, locators.moodle_password)
+#create_new_user()
+#check_user_created()
 
 #Checking the New User Credentials
-setUp()
-log_in(locators.new_username, locators.new_password)
-check_we_logged_in_with_new_cred()
-log_in(locators.moodle_username, locators.moodle_password)
-delete_user()
-log_out()
-tearDown()
+#setUp()
+#log_in(locators.new_username, locators.new_password)
+#check_we_logged_in_with_new_cred()
+#log_in(locators.moodle_username, locators.moodle_password)
+#delete_user()
+#log_out()
+#tearDown()
